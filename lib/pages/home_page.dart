@@ -11,7 +11,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Page')),
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: const Text('Home Page'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: const Column(children: [
         //Find the best coffee for you
 
@@ -19,6 +24,22 @@ class _HomePageState extends State<HomePage> {
 
         //Horizontal listview of coffee
       ]),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
+          ),
+        ],
+      ),
     );
   }
 }
