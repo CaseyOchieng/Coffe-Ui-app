@@ -28,7 +28,8 @@ class CoffeeCard extends StatelessWidget {
 
             // Coffee Name
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,10 +38,31 @@ class CoffeeCard extends StatelessWidget {
                     style: TextStyle(fontSize: 20),
                   ),
                   //Text Description.
+                  const SizedBox(
+                    height: 4,
+                  ),
                   Text(
                     'With Almond Milk',
                     style: TextStyle(color: Colors.grey[700]),
                   )
+                ],
+              ),
+            ),
+
+            // Price
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Price: \$5.00'),
+                  Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(4)),
+                      color: Colors.orange,
+                    ),
+                    child: const Icon(Icons.add),
+                  ),
                 ],
               ),
             )
