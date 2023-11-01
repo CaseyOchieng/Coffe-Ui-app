@@ -57,6 +57,7 @@ class CoffeeCard extends StatelessWidget {
                 children: [
                   const Text('Price: \$5.00'),
                   Container(
+                    // padding: const EdgeInsets.all(4),
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                       color: Colors.orange,
