@@ -1,3 +1,4 @@
+import 'package:coffee/pages/coffee_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -45,10 +46,14 @@ class _HomePageState extends State<HomePage> {
           child: TextField(
             decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey.shade600),
+                borderSide: BorderSide(
+                  color: Colors.grey.shade600,
+                ),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey.shade600),
+                borderSide: BorderSide(
+                  color: Colors.grey.shade600,
+                ),
               ),
               hintText: 'Find your coffee...',
               suffixIcon: const Icon(
@@ -57,9 +62,16 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-        )
+        ),
 
         //Horizontal listview of coffee
+        Expanded(
+            child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: const [
+            CoffeeCard(),
+          ],
+        ))
       ]),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
