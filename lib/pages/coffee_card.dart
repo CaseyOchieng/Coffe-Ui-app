@@ -6,10 +6,10 @@ class CoffeeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25.0, top: 25.0, bottom: 8.0),
+      padding: const EdgeInsets.only(left: 25.0, top: 11.0, bottom: 8.0),
       child: Container(
         padding: const EdgeInsets.all(12.0),
-        width: 200,
+        width: 186,
         decoration: const BoxDecoration(
           color: Colors.black54,
           borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -22,7 +22,6 @@ class CoffeeCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
                 'assets/latte.jpg',
-                fit: BoxFit.cover,
               ),
             ),
 
@@ -39,7 +38,7 @@ class CoffeeCard extends StatelessWidget {
                   ),
                   //Text Description.
                   const SizedBox(
-                    height: 4,
+                    height: 3,
                   ),
                   Text(
                     'With Almond Milk',
@@ -57,7 +56,6 @@ class CoffeeCard extends StatelessWidget {
                 children: [
                   const Text('Price: \$5.00'),
                   Container(
-                    // padding: const EdgeInsets.all(4),
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                       color: Colors.orange,

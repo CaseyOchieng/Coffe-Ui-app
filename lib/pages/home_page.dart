@@ -39,7 +39,6 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(
           height: 25,
         ),
-
         // Search bar
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -63,7 +62,13 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
+// The categories of coffee
+        Container(
+          height: 13,
+          color: Colors.red,
+        ),
 
+// The categories of coffee
         //Horizontal listview of coffee
         Expanded(
             child: ListView(
